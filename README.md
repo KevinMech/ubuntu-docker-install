@@ -32,3 +32,20 @@ sudo systemctl enable docker
 ```
 sudo docker run hello-world
 ```
+
+Congratulations! You officially ran your first container!
+
+## Downloading an Ubuntu Image
+
+Downloading an ubuntu image is fairly straight forward. 
+
+1. In order to download an ubuntu image, in your terminal, run this command:
+
+```
+sudo docker pull ubuntu
+```
+
+2. To check to see if you have the image downloaded to your local machine, you can use this command:
+```
+sudo docker images
+```
