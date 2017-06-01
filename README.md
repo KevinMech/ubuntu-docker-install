@@ -2,10 +2,10 @@
 ![alt text](https://www.ubuntufree.com/wp-content/uploads/2016/09/Docker-Container-With-Ubuntu.png "Docker logo plus Ubuntu logo")
 
 This guide will walk you through the basic process of using Docker in order to download an Ubuntu image, and then show you how to execute it as a container. 
-For this guide, I will be using Docker **1:17.05.0-1 CE (Community Edition)**.
+For this guide, I will be using **Docker 1:17.05.0-1 CE (Community Edition)**.
 
 #### Note
-This guide was written with the intent of setting up your ubuntu image as a development environment for a LAMP stack, however, you are not confined to only using it for that purpose alone. If you are setting up LAMP, I will list a few optional commands afterwards that will make your life easier!
+This guide was written with the intent of setting up your ubuntu image as a development environment for a LAMP stack, however, you are not confined to only using it for that purpose alone. If you are setting up a dev environment for LAMP, I will list a few optional commands afterwards that will make your life easier!
 
 ---
 
