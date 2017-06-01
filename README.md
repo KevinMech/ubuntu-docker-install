@@ -49,3 +49,17 @@ sudo docker pull ubuntu
 ```
 sudo docker images
 ```
+
+## Creating a Container
+
+Now we will create a container using the image we downloaded. We will be using the run command, along with a few parameters we will be passing:
+
+1. In order to create the container, use this command:
+```
+sudo docker run -it ubuntu
+```
+
+-i specifies that it will keep the STDIN open even if not attached
+-t specifies that it will allocate a pseudo-tty for the container
+
+Once run, you should see a tty like session in your terminal. You are now running ubuntu from docker!
