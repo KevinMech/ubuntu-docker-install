@@ -46,7 +46,7 @@ Downloading an ubuntu image is fairly straight forward.
 
 1. In order to download an ubuntu image, in your terminal, run this command:
 
-```
+```bash
 sudo docker pull ubuntu
 ```
 
@@ -89,3 +89,64 @@ sudo docker commit xxx nameofyournewimage
 replacing the xxx with the 3 digits of the container ID you wish to save, and replacing nameofyournewimage with the name of the new image you wish to save.
 
 **Warning:** It is possible to overwrite an existing image if you give the new image the same name as the old one, so be careful!
+
+## After Installation
+
+Congratualations! You now have Ubuntu running in docker! This section will cover things you probably *should* do, but is completly optional.
+
+### Update Ubuntu
+First things first is updating ubuntu
+
+1. In your terminal, enter in this command:
+
+```
+apt update & apt upgrade
+```
+
+### Installing sudo
+Next you should install sudo. Sudo allows you to run programs with elevated permissions, so its pretty important. 
+
+1. To install sudo, type this into your terminal:
+```
+apt install sudo
+```
+
+### Creating a new user
+Some users may or may not want to login as root to preform their tasks. You can create a new user by following these steps.
+
+1. In your terminal, type in this command:
+```
+adduser name
+```
+Replacing name with the name of the user you want
+
+2. Enter in the password for the new account on the next prompt, and then retype it
+
+3. The next few prompts will ask you for some information related to the account. You can leave these empty to assign default values to it.
+
+#### Login to new user
+
+Now that the account is created, I will be showing you a new argument you can use in order to login to any accounts created.
+The ```run -u username``` allows you to login to any accounts you created on the image.
+if you would like to log in to the account using the ubuntu image, follow these steps
+
+1. First, save any changes youve made to your container using the commit command.
+```
+sudo docker commit xxx nameofyournewimage
+```
+replacing the xxx with the 3 digits of the container ID you wish to save, and replacing nameofyournewimage with the name of the new image you wish to save.
+
+2. Exit the current container using this command:
+```
+exit
+``
+
+3. Then login to the new user account using the -u command:
+```
+sudo docker run -it -u username nameofyournewimage
+```
+Replacing the username with your new username you created, and nameofyournewimage with the name of the image you saved it as.
+
+4. If you set a password, you will need to type it in the next prompt.
+
+you are now logged into your new user!
