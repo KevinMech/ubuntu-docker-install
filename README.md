@@ -7,8 +7,8 @@ For this guide, I will be using **Docker 1:17.05.0-1 CE (Community Edition)**.
 #### Note
 This guide was written with the intent of setting up your ubuntu image as a development environment for a LAMP stack, however, you are not confined to only using it for that purpose alone. If you are setting up a dev environment for LAMP, I will list a few optional commands afterwards that will make your life easier!
 
----
-
+--
+-
 ## Installation
 The installation for docker will be different everyone, depending on what operating system you are using. Covering how to install docker on each system will take far too much time, so for that reason alone, I will be documenting how I installed it on my system, and linking the official installation guide for anyone who is running a different operating system. 
 
@@ -21,15 +21,17 @@ For those of you who use an operating system that uses pacman as its package man
 sudo pacman -S docker
 ``` 
 
-2a. Once docker is finished installing, start the docker service by executing this command:
-```
-sudo systemctl start docker
-```
+2. Now start the docker service
+	
+	a. Once docker is finished installing, start the docker service by executing this command:
+	```
+	sudo systemctl start docker
+	```
 
-2b. Alternatively, if you dont want to have to start the service manually each time you reboot, you can use this command to start the docker service on system boot:
-```
-sudo systemctl enable docker
-```
+	b. Alternatively, if you dont want to have to start the service manually each time you reboot, you can use this command to start the docker service on system boot:
+	```
+	sudo systemctl enable docker
+	```
 
 3. Once the service is running, test to see if docker is working by running this command:
 ```
