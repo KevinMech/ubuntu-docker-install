@@ -127,7 +127,7 @@ Replacing name with the name of the user you want
 #### Login to new user
 
 Now that the account is created, I will be showing you a new argument you can use in order to login to any accounts created.
-The ```run -u username``` allows you to login to any accounts you created on the image.
+```run -u username``` allows you to login to any accounts you created on the image.
 if you would like to log in to the account using the ubuntu image, follow these steps
 
 1. First, save any changes youve made to your container using the commit command.
@@ -139,7 +139,7 @@ replacing the xxx with the 3 digits of the container ID you wish to save, and re
 2. Exit the current container using this command:
 ```
 exit
-``
+```
 
 3. Then login to the new user account using the -u command:
 ```
