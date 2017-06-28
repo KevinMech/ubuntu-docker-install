@@ -150,3 +150,23 @@ Replacing the username with your new username you created, and nameofyournewimag
 4. If you set a password, you will need to type it in the next prompt.
 
 you are now logged into your new user!
+
+## LAMP Setup
+
+This section is also optional, and will cover some useful commands for those using Docker for a LAMP stack.
+
+### Binding Port
+
+Working with a LAMP stack, you are probably going to want to expose your port to access your web server. By default, all ports are closed, and no outside connections can connect with the container. By binding your hosts port to the container port, we can expose this container port to the outside world.
+
+In order to do this, we can use the ```-p``` argument.
+
+The -p argument works like this:
+
+```-p hostport:containerport```
+
+where you suply the port that you want to bind with the host where it says ```hostport```, and the port you want to bind with the container where it says ```containerport```.
+
+So, my apache server is set to use the default port 80 on my container. So I would use this command to bind my port:
+
+```sudo docker run -it ubuntu -p 80:80```
